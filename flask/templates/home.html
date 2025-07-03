@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Prediction</title>
+    <style>
+        body {
+            background-color: #ffcccc;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            width: 80%;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        img {
+            margin-top: 40px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mental health Prediction</h1>
+    <p>
+        Mental health affects your emotional, psychological and social well-being. It affects how we think, feel, and act. 
+        It also helps determine how we handle stress, relate to others, and make choices. In the workplace, communication 
+        and initiatives are key skills for successful, high performing teams or employees. The impact of mental health on 
+        an organization can mean an increase of absent days from work and a decrease in productivity and engagement. In the 
+        United States, approximately 70% of adults with depression are in the workforce. Employees with depression will miss 
+        an estimated 35 million workdays a year due to mental illness.
+    </p>
+    <br>
+    <a href="{{ url_for('predict_form') }}"><button>Proceed</button></a>
+    <!-- <img src="brain-heart.png" alt="Mental Health Image" /> -->
+</body>
+</html>

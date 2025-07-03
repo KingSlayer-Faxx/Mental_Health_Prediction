@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Prediction Form</title>
+    <style>
+        body {
+            background-color: #ffcccc;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="number"] {
+            width: 250px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/submit">
+
+        <label>Age:</label>
+        <input type="number" name="Age" min="10" max="100" required>
+
+        <label>Gender:</label>
+        <select name="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Are you self-employed?</label>
+        <select name="self_employed">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Do you have a family history of mental illness?</label>
+        <select name="family_history">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>If you have a mental health condition, do you feel that it interferes with your work?</label>
+        <select name="work_interfere">
+            <option value="Never">Never</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Sometimes">Sometimes</option>
+            <option value="Often">Often</option>
+        </select>
+
+        <label>Company size:</label>
+        <select name="no_employees">
+            <option value="1-5">1-5</option>
+            <option value="6-25">6-25</option>
+            <option value="26-100">26-100</option>
+            <option value="100-500">100-500</option>
+            <option value="500-1000">500-1000</option>
+            <option value="More than 1000">More than 1000</option>
+        </select>
+
+        <label>Do you work remotely?</label>
+        <select name="remote_work">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Is your employer a tech company?</label>
+        <select name="tech_company">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>Does your employer provide mental health benefits?</label>
+        <select name="benefits">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label>Does your employer offer care options for mental health?</label>
+        <select name="care_options">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Not sure">Not sure</option>
+        </select>
+
+        <label>Does your company have a wellness program?</label>
+        <select name="wellness_program">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label>Does your employer encourage seeking help for mental health?</label>
+        <select name="seek_help">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label>Does your employer provide anonymity if you seek help?</label>
+        <select name="anonymity">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label>How easy is it to take mental health leave from your employer?</label>
+        <select name="leave">
+            <option value="Very easy">Very easy</option>
+            <option value="Somewhat easy">Somewhat easy</option>
+            <option value="Somewhat difficult">Somewhat difficult</option>
+            <option value="Very difficult">Very difficult</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label>What do you think is the consequence of discussing mental health at work?</label>
+        <select name="mental_health_consequence">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label>What do you think is the consequence of discussing physical health at work?</label>
+        <select name="phys_health_consequence">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label>Would you discuss a mental health issue with coworkers?</label>
+        <select name="coworkers">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Some of them">Some of them</option>
+        </select>
+
+        <label>Would you discuss a mental health issue with your supervisor?</label>
+        <select name="supervisor">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Some of them">Some of them</option>
+        </select>
+
+        <label>Would you bring up a mental health issue in an interview?</label>
+        <select name="mental_health_interview">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label>Would you bring up a physical health issue in an interview?</label>
+        <select name="phys_health_interview">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label>Do you feel your employer views mental health the same as physical health?</label>
+        <select name="mental_vs_physical">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label>Do you think discussing mental health would affect your career?</label>
+        <select name="obs_consequence">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

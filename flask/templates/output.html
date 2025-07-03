@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-color: #ffcccc;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- The following line will be dynamically set based on the result -->
+    <h2 id="resultText">Loading result...</h2>
+
+    <a href="{{ url_for('home') }}"><button>Home</button></a>
+    <!-- <a href="predict.html"><button>Predict</button></a> -->
+    <!-- <img src="brain-heart.png" alt="Mental Health Image" /> -->
+
+    <script>
+        // This can be dynamically set by your backend or passed via query parameters
+        // For demonstration, we'll simulate the result from query string (?result=yes or ?result=no)
+
+        const params = new URLSearchParams(window.location.search);
+        const result = params.get("result");
+
+        const resultText = document.getElementById("resultText");
+        if (result === "yes") {
+            resultText.innerText = "This person requires mental health treatment";
+        } else if (result === "no") {
+            resultText.innerText = "This person doesn't require mental health treatment";
+        } else {
+            resultText.innerText = "Unable to determine mental health status.";
+        }
+    </script>
+</body>
+</html>
