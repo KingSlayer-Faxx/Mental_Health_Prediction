@@ -124,9 +124,3 @@ We rigorously evaluated multiple algorithms to ensure reliable predictions:
 - **ML Framework**: [scikit-learn documentation](https://scikit-learn.org/)
 - **Web Framework**: [Flask documentation](https://flask.palletsprojects.com/)
 - **Inspiration**: Industry best practices in healthcare ML applications
-
----
-
-**⭐ If this project helps you or your organization, please consider giving it a star!**
-
-*Together, we can make mental health support more accessible through technology.*
