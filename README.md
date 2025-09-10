@@ -1,45 +1,132 @@
+# Mental Health Prediction Using Machine Learning 
+An intelligent system for early detection of mental health conditions through machine learning, helping bridge the gap between technology and mental wellness.
+
+## Overview
+
+Mental health challenges affect millions worldwide, yet early detection remains a significant hurdle. This project tackles this problem head-on by implementing a machine learning-based system that can identify potential mental health conditions like depression, anxiety, and stress through user survey responses.
+
+Our web application leverages the power of classification algorithms to provide real-time risk assessments, enabling timely intervention and proactive support for individuals who need it most.
+
+## Tech Stack
+
+**Backend & ML:**
+- Python 3.x
+- Pandas & NumPy for data manipulation
+- scikit-learn for machine learning algorithms
+- Flask for web framework
+- Pickle for model serialization
+
+**Data Analysis & Visualization:**
+- Seaborn & Matplotlib for insightful visualizations
+- Jupyter Notebook for exploratory data analysis
+
+**Frontend:**
+- HTML/CSS for clean, accessible user interface
+
+**Dataset:**
+- [OSMI Mental Health in Tech Survey](https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey) from Kaggle
+
+## Key Features
+
+- **Smart Data Processing**: Handles missing values, outliers, and categorical encoding automatically
+- **Multi-Model Comparison**: Evaluates Decision Tree, Random Forest, and Logistic Regression algorithms
+- **Comprehensive Evaluation**: Uses accuracy, precision, recall, F1-score, and confusion matrices
+- **Interactive Web Interface**: User-friendly Flask application for real-time predictions
+- **Production Ready**: Designed with scalability and explainability in mind
+- **Regulatory Awareness**: Built considering healthcare compliance requirements
+
+## Project Structure
+
+```
 Mental-Health-Prediction/
-├── data/
-│   └── mental_health_survey.csv         # Raw dataset downloaded from Kaggle
-├── templates/
-│   └── index.html                       # Main HTML file for user interface
-├── static/
-│   └── style.css                        # (Optional) CSS styling for the web app
-├── app.py                               # Flask web server and model inference logic
-├── random_forest_model.pkl              # Best trained ML model (serialized)
-├── notebook.ipynb                       # Jupyter notebook for EDA, preprocessing, and model training
-├── requirements.txt                     # List of required Python dependencies
-├── README.md                            # Project documentation and usage guide
-└── .gitignore                           # Files/patterns to be ignored by Git
+├──  data/
+│   └── mental_health_survey.csv          # Raw survey dataset
+├──  templates/
+│   └── index.html                        # Main user interface
+├──  static/
+│   └── style.css                         # Styling (optional)
+├──  app.py                             # Flask backend application
+├──  random_forest_model.pkl            # Trained ML model
+├──  notebook.ipynb                     # Data analysis & model training
+├──  requirements.txt                   # Python dependencies
+├──  README.md                          # This documentation
+└──  .gitignore                         # Git ignore rules
+```
 
-Mental Health Prediction Using Machine Learning
-Overview
-This project implements a machine learning-based system for the early detection of mental health conditions like depression, anxiety, or stress. The web application uses user survey responses and makes predictions using trained classification models, empowering timely intervention and proactive support for at-risk individuals.
+### Directory Breakdown
 
-Tech Stack
-Python 3.x
+- **`data/`**: Contains the training and testing datasets
+- **`templates/`**: HTML templates for the Flask web interface
+- **`static/`**: CSS stylesheets and other static assets
+- **`app.py`**: Main Flask application with prediction logic
+- **`random_forest_model.pkl`**: Serialized best-performing model
+- **`notebook.ipynb`**: Complete data exploration and model development workflow
 
-Pandas, NumPy, scikit-learn (data manipulation, ML algorithms)
 
-Seaborn, Matplotlib (visualization)
+### Prerequisites
+Make sure you have Python 3.x installed on your system.
 
-Flask (web app framework)
+### Installation
 
-HTML/CSS (UI/Frontend)
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/Mental-Health-Prediction.git
+   cd Mental-Health-Prediction
+   ```
 
-Pickle (model serialization)
+2. **Install required packages:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Jupyter Notebook (EDA and ML development)
+3. **Download the dataset:**
+   - Visit [Kaggle OSMI Mental Health Survey](https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey)
+   - Download the CSV file and place it in the `data/` directory
 
-Dataset: Kaggle [OSMI Mental Health in Tech Survey]
+4. **Explore the data (optional):**
+   ```bash
+   jupyter notebook notebook.ipynb
+   ```
 
-Features
-Cleans and preprocesses survey data (missing value imputation, outlier visualization, categorical encoding)
+5. **Launch the application:**
+   ```bash
+   python app.py
+   ```
+   
+   Navigate to `http://127.0.0.1:5000` in your web browser.
 
-Trains and compares multiple ML models (Decision Tree, Random Forest, Logistic Regression) for prediction
+## Model Performance
 
-Evaluates models with accuracy, precision, recall, F1-score, and confusion matrix
+We rigorously evaluated multiple algorithms to ensure reliable predictions:
 
-Interactive Flask web app for user input and real-time prediction
+| Algorithm | Accuracy | Precision | Recall | F1-Score |
+|-----------|----------|-----------|---------|----------|
+| Random Forest |  Best |  Best |  Best |  Best |
+| Decision Tree | Good | Good | Good | Good |
+| Logistic Regression | Moderate | Moderate | Moderate | Moderate |
 
-Regulatory-aware and designed for scalability and explainability
+**Why Random Forest?**
+- Superior handling of mixed data types
+- Built-in feature importance ranking
+- Robust against overfitting
+- Excellent performance on imbalanced datasets
+
+##  Important Notes
+
+- This tool is designed for **screening and awareness purposes only**
+- It should **never replace professional medical advice**
+- Always consult qualified healthcare providers for proper diagnosis and treatment
+- The model's predictions are based on survey data and may not capture all individual circumstances
+
+## References & Acknowledgments
+
+- **Dataset**: [OSMI Mental Health in Tech Survey](https://www.kaggle.com/datasets/osmi/mental-health-in-tech-survey)
+- **ML Framework**: [scikit-learn documentation](https://scikit-learn.org/)
+- **Web Framework**: [Flask documentation](https://flask.palletsprojects.com/)
+- **Inspiration**: Industry best practices in healthcare ML applications
+
+---
+
+**⭐ If this project helps you or your organization, please consider giving it a star!**
+
+*Together, we can make mental health support more accessible through technology.*
